@@ -23,11 +23,7 @@ import { HttpLoggingInterceptor } from './shared/interceptor/http-logging.interc
     AppController
   ],
   providers: [
-    AppService,
-    {
-      provide: APP_INTERCEPTOR,
-      useClass: HttpLoggingInterceptor
-    }
+    AppService
   ],
 })
 export class AppModule {}
