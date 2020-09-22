@@ -6,11 +6,16 @@ import { tap } from 'rxjs/operators';
 export class HttpLoggingInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<void> {
     const dateBeforeResponse = Date.now();
+    const httpContext = context.switchToHttp();
+    const request = httpContext.getRequest<Request>();
+
+    const logMessage = `[${request.method}] '${request.url}' took ${Date.now() - dateBeforeResponse}ms`;
+    const contextMessage = `${context.getClass().name}`;
 
     return next
       .handle()
       .pipe(
-        tap(() => Logger.log(`${Date.now() - dateBeforeResponse}ms`, context.getClass().name))
+        tap(() => Logger.log(logMessage, contextMessage))
       )
   }
 }
