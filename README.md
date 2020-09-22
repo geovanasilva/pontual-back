@@ -4,21 +4,22 @@
 
 ### Sobre
 
-A aplicação Pontual-Back é responsável por ser a fonte do processamento de servimento de recursos que serão enviados para a aplicação [Pontual-Front](https://github.com/geovanasilva/pontual-front).
+A aplicação Pontual-Back é responsável por ser a fonte do processamento e servimento de recursos que serão enviados para a aplicação [Pontual-Front](https://github.com/geovanasilva/pontual-front).
 
-Essa aplicação está sob desenvolvimento, mas à priori, tem como objetivos:
-- Realizar e processar batimento de pontos;
+Essa aplicação está sob desenvolvimento. Mas à priori, tem como objetivos:
+- Processar batimento de pontos;
 - Informar sobre as informações relacionadas aos batimentos de pontos através de dados que possam ser melhor visualizados em dashboards.
 
-### Tecnologias envolvidas
+### Tecnologias
 
-O Pontual-Back está sendo desenvolvido utilizando [Node](https://nodejs.org/en/), [PostgreSQL](https://www.postgresql.org/). Para facilitar o desenvolvvimento da aplicação, é utilizado o framework [Nest.js](https://nestjs.com/).
+O Pontual-Back está sendo desenvolvido utilizando [Node](https://nodejs.org/en/), [PostgreSQL](https://www.postgresql.org/). Para facilitar o desenvolvimento da aplicação, é utilizado o framework [Nest.js](https://nestjs.com/).
 
 ### Como executar a aplicação
 
 #### Requisitos
 
 Para que você possa executar a aplicação na sua máquina, você deve garantir primeiro que você tenha instalado o Node. Com o Node instalado, você já terá acesso ao NPM (gerenciador de pacotes do Node).
+
 Também, é necessário que você tenha instalado na sua máquina o PostgreSQL.
 
 #### Instalando dependências
@@ -75,3 +76,82 @@ Os mantenedores dessa aplicação são:
 ### Licença
 
 O Pontual-Back está sob a licença [MIT](LICENSE).
+
+# Pontual-Back
+
+## EN-US
+
+### About
+
+Pontual-Back application is responsible for being the sourcing of processing and serving the resources that will sent to the [Pontual-Front](https://github.com/geovanasilva/pontual-front) application.
+
+This application is under development, but at first, it has the following goals:
+- To clock in;
+- To inform about the information related to the many clocked in through data that can be better visualized in dashboards.
+
+### Technologies
+
+Pontual-Back is being develvopment with [Node](https://nodejs.org/en/), [PostgreSQL](https://www.postgresql.org/). In order to facilitate the application's development, the [Nest.js](https://nestjs.com/) framework is being used.
+
+### How to run the application
+
+#### Requirements
+
+In order to execute the application in your machine, you must be sure that you have Node installed. With Node installed, you already have access to NPM (the Node's package manager).
+
+Also, it is necessary that you have PostgreSQL installed in your machine.
+
+#### Installing the dependencies
+
+After cloning the application, you must, through a command line terminal, change to the application's directory and run the following command:
+
+```bash
+$ npm install
+```
+
+This command can take seconds or minutes (it depends on your internet download's rate) to finish its execution.
+
+#### Setting up the environment variables
+
+It is important that you have the environment variables that are essential for the successful application running set up. For that, you must create a file called `.env` in the application's root directory and, based on the environment variables described in the `.env.example` file, you must define their respective values.
+
+#### Running the application
+
+Having the previous steps being made, you just have to run the following command in your command line terminal:
+
+```bash
+$ npm start
+```
+
+If you wish to execute the application in the *watch mode*, rune the following command:
+
+```bash
+$ npm start:dev
+```
+
+**It is important to emphasize that changes that you made in the environment variables will not be reflected during the watch mode. That is, if you changed any environment variables' value, you must to restart the server manually.**
+
+### How to test the application
+
+After cloning the project, installed its dependencies and set the environment variables up in the `.env` file, you must run the following commands in order to test the application:
+
+```bash
+# For unit tests
+$ npm run test
+
+# Fort e2e tests
+$ npm run test:e2e
+
+# For tests coverage
+$ npm run test:cov
+```
+
+### Maintainers
+
+The application's maintainers are:
+- [Geovana Silva](https://github.com/geovanasilva)
+- [Leonardo Santos](https://github.com/leonardossev)
+
+### License
+
+Pontual-Back is under [MIT](LICENSE).
