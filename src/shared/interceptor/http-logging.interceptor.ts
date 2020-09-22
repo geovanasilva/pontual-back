@@ -9,13 +9,13 @@ export class HttpLoggingInterceptor implements NestInterceptor {
     const httpContext = context.switchToHttp();
     const request = httpContext.getRequest<Request>();
 
-    const logMessage = `[${request.method}] '${request.url}' took ${Date.now() - dateBeforeResponse}ms`;
+    const logMessage = `[${request.method}] '${request.url}'`;
     const contextMessage = `${context.getClass().name}`;
 
     return next
       .handle()
       .pipe(
-        tap(() => Logger.log(logMessage, contextMessage))
+        tap(() => Logger.log(`${logMessage} took ${Date.now() - dateBeforeResponse}ms`, contextMessage))
       )
   }
 }
