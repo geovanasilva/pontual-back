@@ -1,77 +1,157 @@
-# pontual-back
+# Pontual-Back
 
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+## PT-BR
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+### Sobre
 
-## Description
+A aplicação Pontual-Back é responsável por ser a fonte do processamento e servimento de recursos que serão enviados para a aplicação [Pontual-Front](https://github.com/geovanasilva/pontual-front).
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Essa aplicação está sob desenvolvimento. Mas à priori, tem como objetivos:
+- Processar batimento de pontos;
+- Informar sobre as informações relacionadas aos batimentos de pontos através de dados que possam ser melhor visualizados em dashboards.
 
-## Installation
+### Tecnologias
+
+O Pontual-Back está sendo desenvolvido utilizando [Node](https://nodejs.org/en/), [PostgreSQL](https://www.postgresql.org/). Para facilitar o desenvolvimento da aplicação, é utilizado o framework [Nest.js](https://nestjs.com/).
+
+### Como executar a aplicação
+
+#### Requisitos
+
+Para que você possa executar a aplicação na sua máquina, você deve garantir primeiro que você tenha instalado o Node. Com o Node instalado, você já terá acesso ao NPM (gerenciador de pacotes do Node).
+
+Também, é necessário que você tenha instalado na sua máquina o PostgreSQL.
+
+#### Instalando dependências
+
+Após clonar a aplicação, você deve, através de algum terminal de linha de comando, entrar no diretório da aplicação e executar o seguinte comando:
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+Esse comando poderá levar alguns segundos ou até minutos (vai variar de acordo com a velocidade de download de sua internet) para terminar de ser executado.
+
+#### Definindo variáveis de ambiente
+
+É importante que você defina as variáveis de ambiente que são essenciais para que a aplicação seja executada com sucesso. Para isso, você deve criar um arquivo `.env` na raiz do projeto e, com base nas variáveis já descritas no arquivo `.env.example`, você deve definir os valores para cada variável.
+
+#### Executando aplicação
+
+Após ter realizado os passos anteriores, basta executar o seguinte comando no seu terminal de linha de comando:
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+$ npm start
 ```
 
-## Test
+Se caso você desejar executar a aplicação de forma que ao alterar o código o servidor seja reiniciado e reflita a sua alteração (*watch mode*), execute o seguinte comando:
 
 ```bash
-# unit tests
+$ npm start:dev
+```
+
+**É importante ressaltar que as mudanças que você fizer nas variáveis de ambiente não serão refletidas se você estiver executando a aplicação no modo *watch*. Ou seja, se você mudar algo no valor de alguma das variáveis de ambiente, você precisará reiniciar o servidor manualmente.**
+
+### Como testar a aplicação
+
+Após ter clonado o projeto, instalado as dependências de deinido os valores das variáveis de ambiente no arquivo `.env`, para você realizar os testes da aplicação você deve executar os seguintes comandos:
+
+```bash
+# Para testes unitários
 $ npm run test
 
-# e2e tests
+# Para testes e2e
 $ npm run test:e2e
 
-# test coverage
+# Para cobertura de testes
 $ npm run test:cov
 ```
 
-## Support
+### Mantenedores
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Os mantenedores dessa aplicação são:
+- [Geovana Silva](https://github.com/geovanasilva)
+- [Leonardo Santos](https://github.com/leonardossev)
 
-## Stay in touch
+### Licença
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+O Pontual-Back está sob a licença [MIT](LICENSE).
 
-## License
+# Pontual-Back
 
-  Nest is [MIT licensed](LICENSE).
+## EN-US
+
+### About
+
+Pontual-Back application is responsible for being the sourcing of processing and serving the resources that will sent to the [Pontual-Front](https://github.com/geovanasilva/pontual-front) application.
+
+This application is under development, but at first, it has the following goals:
+- To clock in;
+- To inform about the information related to the many clocked in through data that can be better visualized in dashboards.
+
+### Technologies
+
+Pontual-Back is being develvopment with [Node](https://nodejs.org/en/), [PostgreSQL](https://www.postgresql.org/). In order to facilitate the application's development, the [Nest.js](https://nestjs.com/) framework is being used.
+
+### How to run the application
+
+#### Requirements
+
+In order to execute the application in your machine, you must be sure that you have Node installed. With Node installed, you already have access to NPM (the Node's package manager).
+
+Also, it is necessary that you have PostgreSQL installed in your machine.
+
+#### Installing the dependencies
+
+After cloning the application, you must, through a command line terminal, change to the application's directory and run the following command:
+
+```bash
+$ npm install
+```
+
+This command can take seconds or minutes (it depends on your internet download's rate) to finish its execution.
+
+#### Setting up the environment variables
+
+It is important that you have the environment variables that are essential for the successful application running set up. For that, you must create a file called `.env` in the application's root directory and, based on the environment variables described in the `.env.example` file, you must define their respective values.
+
+#### Running the application
+
+Having the previous steps being made, you just have to run the following command in your command line terminal:
+
+```bash
+$ npm start
+```
+
+If you wish to execute the application in the *watch mode*, rune the following command:
+
+```bash
+$ npm start:dev
+```
+
+**It is important to emphasize that changes that you made in the environment variables will not be reflected during the watch mode. That is, if you changed any environment variables' value, you must to restart the server manually.**
+
+### How to test the application
+
+After cloning the project, installed its dependencies and set the environment variables up in the `.env` file, you must run the following commands in order to test the application:
+
+```bash
+# For unit tests
+$ npm run test
+
+# Fort e2e tests
+$ npm run test:e2e
+
+# For tests coverage
+$ npm run test:cov
+```
+
+### Maintainers
+
+The application's maintainers are:
+- [Geovana Silva](https://github.com/geovanasilva)
+- [Leonardo Santos](https://github.com/leonardossev)
+
+### License
+
+Pontual-Back is under [MIT](LICENSE).
