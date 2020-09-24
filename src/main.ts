@@ -10,6 +10,6 @@ async function bootstrap() {
   app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalInterceptors(new HttpLoggingInterceptor());
 
-  await app.listen(3000);
+  await app.listen(8080);
 }
 bootstrap();
